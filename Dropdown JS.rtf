@@ -1,0 +1,31 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 jQuery(document).ready(function (e) \{\
+    function t(t) \{\
+        e(t).bind("click", function (t) \{\
+            t.preventDefault();\
+            e(this).parent().fadeOut()\
+        \})\
+    \}\
+    e(".dropdown-toggle").click(function () \{\
+        var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");\
+        e(".button-dropdown .dropdown-menu").hide();\
+        e(".button-dropdown .dropdown-toggle").removeClass("active");\
+        if (t) \{\
+            e(this).parents(".button-dropdown").children(".dropdown-menu").toggle().parents(".button-dropdown").children(".dropdown-toggle").addClass("active")\
+        \}\
+    \});\
+    e(document).bind("click", function (t) \{\
+        var n = e(t.target);\
+        if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-menu").hide();\
+    \});\
+    e(document).bind("click", function (t) \{\
+        var n = e(t.target);\
+        if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-toggle").removeClass("active");\
+    \})\
+\});}
